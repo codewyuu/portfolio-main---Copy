@@ -137,7 +137,7 @@ const SponsorsPage = () => {
 
 function AppRoutes() {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <div className="relative z-10">
         <Routes>
           <Route path="/" element={<HomePage />} />

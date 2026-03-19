@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = React.useState(false)
+  const currentTheme = resolvedTheme === "dark" ? "dark" : "light"
 
   const handleThemeChange = React.useCallback(() => {
-    const newTheme = theme === "light" ? "dark" : "light"
+    const newTheme = currentTheme === "light" ? "dark" : "light"
     
     if (typeof document !== "undefined" && "startViewTransition" in document) {
       ;(document as Document & { startViewTransition: (callback: () => void) => void }).startViewTransition(() => {
@@ -20,7 +21,7 @@ export function ModeToggle() {
     } else {
       setTheme(newTheme)
     }
-  }, [theme, setTheme])
+  }, [currentTheme, setTheme])
 
   React.useEffect(() => {
     setMounted(true)
@@ -47,7 +48,7 @@ export function ModeToggle() {
       className="w-8 h-8 p-0 rounded-none relative overflow-hidden border-0 bg-transparent shadow-none text-neutral-700 dark:text-neutral-200 hover:bg-transparent hover:text-neutral-900 dark:hover:text-neutral-100"
     >
       <AnimatePresence mode="wait" initial={false}>
-        {theme === "light" ? (
+        {currentTheme === "light" ? (
           <motion.div
             key="sun"
             initial={{ scale: 0, rotate: -180 }}

@@ -20,7 +20,7 @@ interface CallToActionProps {
 }
 
 export default function CallToAction({
-  profileImage = "/pfp.jpg",
+  profileImage = "/pic8.jpeg",
   profileAlt = "Yuvraj Sharma",
   linkText = "Book a Call",
   linkUrl = "https://cal.com/yuvrajsharma/quickchat",
