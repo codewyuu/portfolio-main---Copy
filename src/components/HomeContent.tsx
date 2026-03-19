@@ -45,9 +45,9 @@ export default function NewHeroSection() {
               title="research & opensource"
               profileImage="/pic8.jpeg"
               socialLinks={{
-                twitter: "",
+                twitter: "https://x.com/codewyuu",
                 github: "https://github.com/codewyuu",
-                linkedin: "",
+                linkedin: "https://www.linkedin.com/in/knowasyuvraj/",
                 resume: "/cvportfolio.pdf",
               }}
             />

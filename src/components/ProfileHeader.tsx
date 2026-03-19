@@ -34,9 +34,9 @@ export default function ProfileHeader({
   title = "research & opensource • full‑stack developer",
   profileImage = "/pfp.jpg",
   socialLinks = {
-    twitter: "",
+    twitter: "https://x.com/codewyuu",
     github: "https://github.com/codewyuu",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/knowasyuvraj/",
     resume: "/cvportfolio.pdf",
   }
 }: ProfileHeaderProps) {
